@@ -73,6 +73,7 @@ plugins=(git tmux)
 
 # User configuration
 ZSH_TMUX_AUTOSTART="true"
+ZSH_DISABLE_COMPFIX="true"
 
 #starts zsh
 source $ZSH/oh-my-zsh.sh
