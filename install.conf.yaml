@@ -1,14 +1,26 @@
-- clean: ['~']
-
-- link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-
+- defaults:
+    link:
+      relink: true
 
 - clean: ['~']
 
-- link:
-    ~/.gitconfig: gitconfig
+- link:    
+    ~/.bash:
+    ~/.bash_logout:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.dotfiles: ''
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/.profile:
+    ~/.pythonrc:
+    ~/.shell:
+    ~/.tmux.conf:
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zsh:
+    ~/.zshrc:
 
+- shell:
+        - [git submodule update --init --recursive, Installing submodules]
 
