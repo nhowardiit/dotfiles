@@ -70,10 +70,12 @@ ZSH_THEME="sporty_256"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux)
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 ZSH_TMUX_AUTOSTART="true"
+
+#starts zsh
+source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
