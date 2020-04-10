@@ -5,7 +5,7 @@ typeset +H _current_dir="%{$fg_bold[blue]%}%5~%{$reset_color%} "
 typeset +H _return_status="%{$fg_bold[red]%}%(?..⍉)%{$reset_color%}"
 typeset +H _hist_no="%{$fg[grey]%}%h%{$reset_color%}"
 
-PROMPT='$(git_prompt_info) | ${_current_dir}
+PROMPT='$(git_prompt_info)${_current_dir}
 %{%(!.%F{red}.%F{white})%}>>>%{$resetcolor%} '
 
 RPROMPT='%n@%m'
@@ -44,7 +44,7 @@ MODE_INDICATOR="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$r
 
 # Git prompt settings
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} | "
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}✘%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚ "
