@@ -1,14 +1,15 @@
 # Custom theme based on AVIT ZSH Theme
 
 # settings
-typeset +H _current_dir="%{$fg_bold[blue]%}%5~%{$reset_color%} "
-typeset +H _return_status="%{$fg_bold[red]%}%(?..⍉)%{$reset_color%}"
-typeset +H _hist_no="%{$fg[grey]%}%h%{$reset_color%}"
+typeset +H _current_dir="%{$fg_bold[red]%}%~%{$reset_color%} "
+typeset +H _current_host="%{$fg_bold[green]%n$fg_bold[black]@$fg_bold[magenta]%m%}"
 
 PROMPT='$(git_prompt_info)${_current_dir}
-%{%(!.%F{red}.%F{white})%}>>>%{$resetcolor%} '
+%{$fg[white]%}>>>%{$resetcolor%} '
 
+#RPROMPT='%{$fg_bold[green]%n%{$fg_bold[black]@%{$fg_bold[magenta]%m'
 RPROMPT='%n@%m'
+#RPROMPT=${_current_host}
 
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
@@ -43,20 +44,10 @@ function _git_time_since_commit() {
 MODE_INDICATOR="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$reset_color%}"
 
 # Git prompt settings
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} | "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[cyan]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%b | "
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}✘%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚ "
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}⚑ "
-ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}▴ "
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%}◒ "
-
-# Ruby prompt settings
-ZSH_THEME_RUBY_PROMPT_PREFIX="%{$fg[grey]%}"
-ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[green]%}✔%{$reset_color%}"
 
 # Colors vary depending on time lapsed.
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
