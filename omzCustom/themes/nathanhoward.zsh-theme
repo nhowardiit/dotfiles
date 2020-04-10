@@ -1,61 +1,30 @@
-# Custom theme based on AVIT ZSH Theme
+#Custom oh-my-zsh theme made by Nathan Howard
 
-# settings
-typeset +H _current_dir="%{$fg_bold[red]%}%~%{$reset_color%} "
-typeset +H _current_host="%{$fg_bold[green]%n$fg_bold[black]@$fg_bold[magenta]%m%}"
+#Color definitions
+#Based on Solaized in CONEMU
+local grey="%{$fg_bold[black]%}"
+local green="%{$fg_bold[green]%}"
+local grey2="%{$fg_bold[red]%}"
+local cyan="%{$fg_bold[cyan]%}"
+local yellow="%{$fg_bold[yellow]%}"
+local blue="%{$fg_bold[blue]%}"
+local magenta="%{$fg_bold[magenta]%}"
+local white="%{$fg_bold[white]%}"
+local reset="%{$reset_color%}"
+
+# definitions
+typeset +H _current_dir="$grey%~$reset"
+typeset +H _current_host="$green%n$grey@$magenta%m$reset"
 
 PROMPT='$(git_prompt_info)${_current_dir}
-%{$fg[white]%}>>>%{$resetcolor%} '
+$grey>>>$reset'
 
 #RPROMPT='%{$fg_bold[green]%n%{$fg_bold[black]@%{$fg_bold[magenta]%m'
-RPROMPT='%n@%m'
-#RPROMPT=${_current_host}
-
-# Determine the time since last commit. If branch is clean,
-# use a neutral color, otherwise colors will vary according to time.
-function _git_time_since_commit() {
-  local last_commit now seconds_since_last_commit
-  local minutes hours days years commit_age
-  # Only proceed if there is actually a commit.
-  if last_commit=$(git log --pretty=format:'%at' -1 2> /dev/null); then
-    now=$(date +%s)
-    seconds_since_last_commit=$((now-last_commit))
-
-    # Totals
-    minutes=$((seconds_since_last_commit / 60))
-    hours=$((minutes / 60))
-    days=$((hours / 24))
-    years=$((days / 365))
-
-    if [[ $years -gt 0 ]]; then
-      commit_age="${years}y$((days % 365 ))d"
-    elif [[ $days -gt 0 ]]; then
-      commit_age="${days}d$((hours % 24))h"
-    elif [[ $hours -gt 0 ]]; then
-      commit_age+="${hours}h$(( minutes % 60 ))m"
-    else
-      commit_age="${minutes}m"
-    fi
-
-    echo "${ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL}${commit_age}%{$reset_color%}"
-  fi
-}
-
-MODE_INDICATOR="%{$fg_bold[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$reset_color%}"
+#RPROMPT='%n@%m'
+RPROMPT='$_current_host'
 
 # Git prompt settings
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[cyan]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%b | "
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}✘%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[green]%}✔%{$reset_color%}"
-
-# Colors vary depending on time lapsed.
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
-ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg[yellow]%}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg[red]%}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[white]%}"
-
-# LS colors, made with https://geoff.greer.fm/lscolors/
-export LSCOLORS="exfxcxdxbxegedabagacad"
-export LS_COLORS='di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
-export GREP_COLOR='1;33'
+ZSH_THEME_GIT_PROMPT_PREFIX="$cyan"
+ZSH_THEME_GIT_PROMPT_SUFFIX="$reset | "
+ZSH_THEME_GIT_PROMPT_DIRTY=" $red✘$reset"
+ZSH_THEME_GIT_PROMPT_CLEAN=" $green✔$reset"
