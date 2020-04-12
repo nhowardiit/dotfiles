@@ -1,6 +1,6 @@
 - defaults:
     link:
-      relink: true
+	relink: true
 
 - clean: ['~']
 
@@ -13,6 +13,7 @@
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.oh-my-zsh/custom: omzCustom 
+	force: true
     ~/.profile:
     ~/.pythonrc:
     ~/.shell:
@@ -21,6 +22,7 @@
     ~/.vimrc:
     ~/.zsh:
     ~/.zshrc:
+	force: true
 
 - shell:
         - [git submodule update --init --recursive, Installing submodules]
