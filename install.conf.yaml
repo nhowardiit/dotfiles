@@ -5,13 +5,10 @@
 - clean: ['~']
 
 - link:    
-    ~/.bash:
-    ~/.bash_logout:
-    ~/.bash_profile:
-    ~/.bashrc:
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gitignore_global:
+	force: true
     ~/.oh-my-zsh/custom: omzCustom 
 	force: true
     ~/.profile:
