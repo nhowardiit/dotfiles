@@ -17,10 +17,7 @@ typeset +H _current_dir="$grey%~$reset"
 typeset +H _current_host="$green%n$grey@$magenta%m$reset"
 
 PROMPT='$(git_prompt_info)${_current_dir}
-$grey>>>$reset'
-
-#RPROMPT='%{$fg_bold[green]%n%{$fg_bold[black]@%{$fg_bold[magenta]%m'
-#RPROMPT='%n@%m'
+$fgrey>>>$reset'
 RPROMPT='$_current_host'
 
 # Git prompt settings
