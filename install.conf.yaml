@@ -6,7 +6,6 @@
 
 - link:    
     ~/.dotfiles: ''
-    ~/.gitconfig:
     ~/.gitignore_global:
       force: true
     ~/.oh-my-zsh/custom:
