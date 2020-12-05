@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/nathan/.vim'
 let g:netrw_dirhist_2='/home/nathan/.todo'
 let g:netrw_dirhist_3='/mnt/c/gsep/projects/dvs-cost-metrics/.git'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/nathan/playground/sudoku'
 let g:netrw_dirhist_5='/home/nathan/playground/codeClinic/Ch04/solution'
 let g:netrw_dirhist_6='/mnt/c/gsep/projects/dvs-cost-metrics'
 let g:netrw_dirhist_7='/home/nathan/playground/test.csv'
+let g:netrw_dirhist_8='/home/nathan/git/dotfiles/.git'

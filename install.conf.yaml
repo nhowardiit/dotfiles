@@ -15,11 +15,15 @@
     ~/.pythonrc:
     ~/.shell:
     ~/.tmux.conf:
+    ~/.todo:
     ~/.vim:
     ~/.vimrc:
     ~/.zsh:
     ~/.zshrc:
       force: true
+
+- create:
+    - ~/todo
 
 - shell:
         - [git submodule update --init --recursive, Installing submodules]
