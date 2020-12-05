@@ -1,5 +1,4 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# If you come from bash you might have to change your $PATH.  # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
  export ZSH=$HOME/.oh-my-zsh
@@ -80,6 +79,11 @@ plugins=(git tmux)
   source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
+#PATH additions
+#needed for topydo
+ export PATH=/home/nathan/.local/bin/:$PATH
+#needed for entitybroker python module
+ export PYTHONPATH='/mnt/c/gsep/projects/entity-broker-python'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -102,3 +106,22 @@ plugins=(git tmux)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#[Python]
+alias pip='noglob pip3'
+alias python='noglob python3'
+alias py='noglob python3'
+alias ipy='ipython'
+
+#[todo.txt]
+alias t='todo.sh -an'
+alias to='todo.sh -an do'
+alias tshow='~/todo/tmux_todo.sh'
+alias tm='todo.sh -an add "(A) [Meeting]"'
+alias taa='todo.sh -an add "(A)"'
+alias tab='todo.sh -an add "(B)"'
+alias tac='todo.sh -an add "(C)"'
+
+#[Other]
+alias cdg='cd /mnt/c/gsep/projects'
+alias tsc='python3 ~/playground/scripts/TimeStampConverter.py'
