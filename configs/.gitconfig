@@ -1,0 +1,9 @@
+[user]
+	name = Nathan Howard
+	email = nhoward.iit@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	excludesfile = /Users/nathanhoward/.gitignore_global

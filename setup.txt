@@ -1,0 +1,6 @@
+## Applications
+- tmux
+- git
+
+## run
+- ./.dotfiles/scripts/linkConfigs.sh
