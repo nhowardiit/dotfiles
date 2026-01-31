@@ -24,9 +24,9 @@ for filepath in "$SOURCE_DIR"/*; do
     target_path="$TARGET_DIR/$filename"
 
     # Skip directories if you only want to link files (optional)
-    if [ -d "$filepath" ]; then
-        continue
-    fi
+    # if [ -d "$filepath" ]; then
+    #    continue
+    # fi
 
     # Remove existing file, symlink, or directory at the target location
     # This ensures the 'replace' requirement is met
