@@ -1,15 +1,5 @@
-
-Dotfiles
-========
-
-After cloning this repo, run `install` to automatically set up the development
-environment. Note that the install script is idempotent: it can safely be run
-multiple times.
-
-Dotfiles uses [Dotbot][dotbot] for installation.
-## Applications
-- tmux
-- git
+# Dotfiles
 
 ## run
-- ./.dotfiles/scripts/linkConfigs.sh
+
+./.dotfiles/scripts/linkConfigs.sh
