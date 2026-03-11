@@ -1,7 +1,7 @@
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 ### Path
-export PATH="$PATH:~/.dotfiles/scripts"
+export PATH="$HOME/.dotfiles/scripts:$PATH"
 
 ### Aliases
 	alias ll="ls -lh"
